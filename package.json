@@ -1,0 +1,24 @@
+{
+	"name": "corona-overflow",
+	"version": "0.0.1",
+	"scripts": {
+		"build": "webpack",
+		"start:dev": "webpack-dev-server",
+		"start": "npm build && serve dist"
+	},
+	"dependencies": {
+		"babel-core": "latest",
+		"babel-loader": "latest",
+		"babel-plugin-transform-object-rest-spread": "latest",
+		"babel-preset-es2015": "latest",
+		"bootstrap": "latest",
+		"react": "latest",
+		"react-redux": "latest",
+		"redux": "latest",
+		"redux-form": "latest",
+		"reselect": "latest",
+		"serve": "latest",
+		"webpack": "latest",
+		"webpack-dev-server": "latest"
+	}
+}
