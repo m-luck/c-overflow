@@ -1,4 +1,4 @@
-"""corona_overflow URL Configuration
+"""Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/dev/topics/http/urls/
@@ -13,11 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from app_overflow import views
 from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    path('', include('corona_overflow_app.urls')),
+    path(r'admin/', admin.site.urls),
+    # re_path(r'^api/submission/$', views.submission_list),
+    # re_path(r'^api/submission/(?P<id>[0-9]+)$', views.submission_detail),
+    path('api/submission/', views.SubmissionListCreate.as_view() ),
 ]

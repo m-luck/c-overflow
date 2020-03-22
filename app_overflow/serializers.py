@@ -7,6 +7,7 @@ class SubmissionSerializer(serializers.ModelSerializer):
         fields = (
             'breathing',
             'comment',
+            'cough',
             'created_at',
             'email',
             'fatigue',
