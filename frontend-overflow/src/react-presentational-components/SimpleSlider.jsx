@@ -2,12 +2,17 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
+import {
+    DEFAULT_MAX,
+    DEFAULT_MID,
+    DEFAULT_MIN,
+} from '../constants.js'
 
 const SimpleSlider = props => {
     const {
         marks = [],
-        max = 10,
-        min = 0,
+        max = DEFAULT_MAX,
+        min = DEFAULT_MIN,
     } = props
 
     const valuetext = value => `${value}`

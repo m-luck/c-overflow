@@ -17,8 +17,18 @@ const requestSubmissions = (component) => {
     )
 }
 
+const convertTupleToMarkObject = (tuple) => {
+    return (
+        {
+            value: tuple[0],
+            label: tuple[1]
+        }
+    )
+}
+
 const selectors = {
-    requestSubmissions
+    requestSubmissions,
+    convertTupleToMarkObject
 }
 
 export default selectors

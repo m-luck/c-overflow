@@ -1,13 +1,18 @@
 import React from 'react'
 import { StyledSimpleSlider } from './styled-presentational-components.jsx'
+import {
+    DEFAULT_MAX,
+    DEFAULT_MID,
+    DEFAULT_MIN,
+} from '../constants.js'
 
 const SliderSection = props => {
 
     const {
-        max = 10,
         marks = [],
-        min = 0,
-        sectionTitle = 'Untitled',
+        max = DEFAULT_MAX,
+        min = DEFAULT_MIN,
+        sectionTitle,
     } = props
 
     return (

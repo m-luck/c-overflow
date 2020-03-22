@@ -1,19 +1,22 @@
 export const API_SUBMISSION_URL = "http://localhost:8000/api/submission/"
 
+// Redux Form Keys
+export const SLIDERS_FORM_KEY = 'SLIDERS_FORM'
+
 // Sliders
-const DEFAULT_MIN = 0
-const DEFAULT_MIN_PLUS = 10
-const DEFAULT_MID = 50
-const DEFAULT_MAX = 90
-const generate_config = (min, max, marks, item) =>
-        ({ min, max, marks, item })
+export const DEFAULT_MIN = 0
+export const DEFAULT_MIN_PLUS = 10
+export const DEFAULT_MID = 50
+export const DEFAULT_MAX = 90
+const generate_config = (min, max, marks, item, sectionTitle) =>
+        ({ min, max, marks, item, sectionTitle })
 const BREATHING_CONFIG = generate_config(DEFAULT_MIN, DEFAULT_MAX,
         [
             [DEFAULT_MIN, "Normal"],
             [DEFAULT_MID, "Difficult"],
             [DEFAULT_MAX, "Incapacitated"],
         ],
-        'Breathing'
+        'Breathing',
     )
 const COUGH_CONFIG = generate_config(DEFAULT_MIN, DEFAULT_MAX,
         [
@@ -75,7 +78,8 @@ const VISITS_CONFIG = generate_config(0, 5,
             [4, "Diagnosed, Deemed Fine"],
             [5, "Diagnosed, Deemed Ill"],
         ],
-        ''
+        '',
+        'Hospital Visits'
     )
 const WORRY_CONFIG = generate_config(DEFAULT_MIN, DEFAULT_MAX,
         [
@@ -83,12 +87,25 @@ const WORRY_CONFIG = generate_config(DEFAULT_MIN, DEFAULT_MAX,
             [DEFAULT_MID, "Anxious"],
             [DEFAULT_MAX, "Fearful"],
         ],
-        ''
+        '',
+        'Worry'
     )
 const BELIEF_CONFIG = generate_config(DEFAULT_MIN, DEFAULT_MAX,
         [
             [DEFAULT_MIN, "No"],
             [DEFAULT_MAX, "Yes"],
         ],
-        ''
+        '',
+        'Do I believe I have it?'
     )
+export const sliderConfigs = [
+    BREATHING_CONFIG,
+    COUGH_CONFIG,
+    HEADACHE_CONFIG,
+    FEVER_CONFIG,
+    NOSE_CONFIG,
+    THROAT_CONFIG,
+    VISITS_CONFIG,
+    WORRY_CONFIG,
+    BELIEF_CONFIG,
+]
