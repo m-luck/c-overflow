@@ -2,12 +2,14 @@ import React from 'react'
 import { StyledSimpleSlider } from './styled-presentational-components.jsx'
 
 const SliderSection = props => {
+
     const {
-        max,
+        max = 10,
         marks = [],
-        min,
-        sectionTitle,
+        min = 0,
+        sectionTitle = 'Untitled',
     } = props
+
     return (
         <div>
             <h3>{sectionTitle}</h3>

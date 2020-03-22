@@ -6,17 +6,11 @@ import Slider from '@material-ui/core/Slider';
 const SimpleSlider = props => {
     const {
         marks = [],
-        max,
-        min,
+        max = 10,
+        min = 0,
     } = props
 
-    const useStyles = makeStyles({
-        root: {
-            width: 300,
-        },
-    });
-
-    const valuetext = value => `${value}°C`
+    const valuetext = value => `${value}`
 
     return (
         <Slider
