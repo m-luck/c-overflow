@@ -6,10 +6,10 @@ module.exports = {
         filename: 'main.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
-                test: /.jsx?$/,
-                loader: 'babel-loader',
+                test: /\.jsx?$/,
+                use: 'babel-loader',
                 exclude: /node_modules/
             }
         ]

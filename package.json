@@ -7,18 +7,25 @@
 		"start": "npm build && serve dist"
 	},
 	"dependencies": {
-		"babel-core": "latest",
-		"babel-loader": "latest",
-		"babel-plugin-transform-object-rest-spread": "latest",
-		"babel-preset-es2015": "latest",
+		"@material-ui/core": "^4.9.7",
 		"bootstrap": "latest",
 		"react": "latest",
+		"react-dom": "latest",
 		"react-redux": "latest",
 		"redux": "latest",
 		"redux-form": "latest",
 		"reselect": "latest",
 		"serve": "latest",
+		"styled-components": "^5.0.1"
+	},
+	"devDependencies": {
+		"@babel/core": "latest",
+		"@babel/plugin-proposal-object-rest-spread": "latest",
+		"@babel/preset-env": "latest",
+		"@babel/preset-react": "latest",
+		"babel-loader": "latest",
 		"webpack": "latest",
+		"webpack-cli": "latest",
 		"webpack-dev-server": "latest"
 	}
 }
