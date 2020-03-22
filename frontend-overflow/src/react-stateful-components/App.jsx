@@ -1,12 +1,9 @@
 import React from 'react'
-import axios from 'axios'
 import styled from 'styled-components'
 import {
     StyledSliderSection
 } from '../react-presentational-components/styled-presentational-components.jsx'
-import {
-    SUBMISSION_API_URL
-} from '../constants.js'
+import selectors from '../selectors/selectors.js'
 
 class App extends React.Component {
 
@@ -17,28 +14,33 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.resetState()
+        this.populateState()
+    }
+
+    populateState = () => {
+        this.getSubmissions()
     }
 
     getSubmissions = () => {
-        axios.get(API_SUBMISSION_URL).then(res => this.setState({ submissions: res.data }));
-    }
-
-    resetState = () => {
-        this.getSubmissions();
+        selectors.requestSubmissions(this)
     }
 
     render() {
         return (
             <div>
                 {
-                    this.state.submissions.forEach( submission =>
-                        <StyledSliderSection
-                            sectionTitle={submission.email}
-                            max={submission.max}
-                            marks={submission.marks}
-                            min={submission.min}
-                        />
+                    this.state.submissions.map( submission =>
+                        {
+                            return (
+                                <StyledSliderSection
+                                    key="example-key"
+                                    sectionTitle='Untitled'
+                                    max={submission.max}
+                                    marks={submission.marks}
+                                    min={submission.min}
+                                />
+                            )
+                        }
                     )
                 }
             </div>

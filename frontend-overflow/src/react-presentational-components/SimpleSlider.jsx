@@ -15,7 +15,7 @@ const SimpleSlider = props => {
     return (
         <Slider
             aria-labelledby="discrete-slider"
-            defaultValue={50}
+            defaultValue={max/2}
             getAriaValueText={valuetext}
             marks={marks}
             max={max}

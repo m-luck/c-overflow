@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Submission(models.Model):
     # Logistics
     created_at = models.DateTimeField(auto_now_add=True)
@@ -7,17 +8,17 @@ class Submission(models.Model):
     ip_address = models.CharField(max_length=16)
 
     # Payloads
+    belief = models.IntegerField()
     breathing = models.IntegerField()
     comment = models.TextField()
     cough = models.IntegerField()
     fatigue = models.IntegerField()
     fever = models.IntegerField()
+    headache = models.IntegerField()
     nose = models.IntegerField()
     throat = models.IntegerField()
     visits = models.IntegerField()
     worry = models.IntegerField()
-
-    # def save(self):
 
 # def get_client_ip(request):
 #     x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
