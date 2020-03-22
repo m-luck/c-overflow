@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 // Components
 import {
-    StyledSimpleSlider,
+    StyledSliderSection,
 } from './react-presentational-components/styled-presentational-components.jsx'
 // Redux
 import appReducer from './redux/reducers.js'
 
 const App = () => (
     <div>
-        <StyledSimpleSlider
-            domID="slider1"
+        <StyledSliderSection
             max={100}
+            marks={[]}
             min={0}
         />
     </div>

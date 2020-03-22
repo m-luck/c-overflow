@@ -5,8 +5,7 @@ import Slider from '@material-ui/core/Slider';
 
 const SimpleSlider = props => {
     const {
-        domID,
-        markers,
+        marks = [],
         max,
         min,
     } = props
@@ -20,15 +19,15 @@ const SimpleSlider = props => {
     const valuetext = value => `${value}°C`
 
     return (
-        <Slider id={domID}
+        <Slider
+            aria-labelledby="discrete-slider"
             defaultValue={50}
             getAriaValueText={valuetext}
-            aria-labelledby="discrete-slider"
-            valueLabelDisplay="auto"
-            step={1}
-            marks
-            min={min}
+            marks={marks}
             max={max}
+            min={min}
+            step={1}
+            valueLabelDisplay="auto"
         />
     )
 }
