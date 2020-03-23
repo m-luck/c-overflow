@@ -10,8 +10,8 @@ export const colors = {
     softWhite: '#F6F6F6',
 }
 
-export const API_SUBMISSION_URL = "http://localhost:8000/api/submission/"
-export const API_SUBMISSION_BACKUP_URL = "http://localhost:8000/api/submission_backup/"
+export const API_SUBMISSION_URL = "http://127.0.0.1:8000/api/submission/"
+export const API_SUBMISSION_BACKUP_URL = "http://127.0.0.1:8000/api/submission_backup/"
 
 // Redux Form Keys
 export const SLIDERS_FORM_KEY = 'SLIDERS_FORM'
