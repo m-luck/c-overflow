@@ -3,3 +3,4 @@
 *.ignore
 db.sql*
 */__pycache__/
+node_modules
