@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
     entry: './frontend-overflow/src/index.js',
     output: {
-        path: path.resolve('frontend-overflow/dist'),
+        path: path.resolve('dist'),
         filename: 'bundle.js'
     },
     module: {
