@@ -4,7 +4,7 @@
 	"scripts": {
 		"build": "webpack",
 		"start:dev": "webpack && webpack-dev-server",
-		"start": "(pipenv run python manage.py runserver) && (npm build && serve dist)"
+		"start": "(pipenv run python manage.py runserver) && (npm build && serve frontend-overflow/dist)"
 	},
 	"dependencies": {
 		"@babel/plugin-proposal-class-properties": "^7.8.3",
