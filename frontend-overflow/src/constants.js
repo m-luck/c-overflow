@@ -11,6 +11,7 @@ export const colors = {
 }
 
 export const API_SUBMISSION_URL = "http://localhost:8000/api/submission/"
+export const API_SUBMISSION_BACKUP_URL = "http://localhost:8000/api/submission_backup/"
 
 // Redux Form Keys
 export const SLIDERS_FORM_KEY = 'SLIDERS_FORM'
@@ -123,7 +124,7 @@ const BELIEF_CONFIG = generate_config(DEFAULT_MIN, DEFAULT_MAX,
             [DEFAULT_MAX-1, "100% Yes"],
         ],
         '',
-        'Do I personally believe I have COVID-19?',
+        'Do I individually believe I have COVID-19?',
         'Belief'
     )
 export const sliderConfigs = [

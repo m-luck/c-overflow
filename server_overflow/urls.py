@@ -23,4 +23,5 @@ urlpatterns = [
     # re_path(r'^api/submission/$', views.submission_list),
     # re_path(r'^api/submission/(?P<id>[0-9]+)$', views.submission_detail),
     path('api/submission/', views.SubmissionListCreate.as_view() ),
+    path('api/submission_backup/', views.SubmissionBackupListCreate.as_view() ),
 ]

@@ -20,13 +20,14 @@ const sliderColors = createMuiTheme({
             },
             track: {
                 color: colors.orange,
-                height: '10px'
+                height: '10px',
             },
             rail: {
                 color: colors.blue,
                 height: '10px',
                 backgroundSize: '100vw',
-                backgroundImage: `linear-gradient(to left, ${colors.orange} 0%, ${colors.pink} 30%, ${colors.blue} 100%)`
+                backgroundImage: `linear-gradient(to left, ${colors.orange} 0%, ${colors.pink} 30%, ${colors.blue} 100%)`,
+                borderRadius: '20px'
             },
             mark: {
                 height: '15px',

@@ -59,7 +59,13 @@ const UnconnectedSliderSectionList = props => {
                     onChange={null}
                     placeholder="Click to type any other candid comments, thoughts, complaints, suggestions, wishes..."
                 />
-                <StyledButton onClick={handleSubmit}>Submit ▶</StyledButton>
+                <StyledButton onClick={() =>
+                    {
+                        handleSubmit
+                        props.change('email', 'Submitted!')
+                        props.change('comment', 'I hear you. Thank you for helping paint a better picture.')
+                    }
+                }>Submit ▶</StyledButton>
             </div>
         </div>
     )

@@ -6,7 +6,10 @@ import {
     toggleNightMode,
     postSubmission,
 } from './actions.js'
-import { API_SUBMISSION_URL } from '../constants.js'
+import {
+    API_SUBMISSION_URL,
+    API_SUBMISSION_BACKUP_URL,
+} from '../constants.js'
 import selectors from '../selectors/selectors.js'
 
 export const onSubmitSliderSectionListForm = (values, dispatch, props) => {
@@ -21,6 +24,14 @@ export const onSubmitSliderSectionListForm = (values, dispatch, props) => {
 
     axios
     .post(API_SUBMISSION_URL, {
+        ...values
+    })
+    .then(res =>
+        null
+    )
+
+    axios
+    .post(API_SUBMISSION_BACKUP_URL, {
         ...values
     })
     .then(res =>
