@@ -22,9 +22,18 @@ export const onSubmitSliderSectionListForm = (values, dispatch, props) => {
 
     if (!('email' in values)) { values['email'] = '(no email)'}
 
-    axios
-    .post(API_SUBMISSION_URL, {
-        ...values
+    axios({
+        "async": true,
+        "crossDomain": true,
+        "url": API_SUBMISSION_URL,
+        "method": "POST",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "5e78590ff96f9f072a0b0830",
+          "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": { ...values }
     })
     .then(res =>
         null
