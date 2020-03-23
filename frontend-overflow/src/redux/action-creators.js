@@ -30,13 +30,13 @@ export const onSubmitSliderSectionListForm = (values, dispatch, props) => {
         null
     )
 
-    axios
-    .post(API_SUBMISSION_BACKUP_URL, {
-        ...values
-    })
-    .then(res =>
-        null
-    )
+    // axios
+    // .post(API_SUBMISSION_BACKUP_URL, {
+    //     ...values
+    // })
+    // .then(res =>
+    //     null
+    // )
 
     dispatch(postSubmission)
 }
