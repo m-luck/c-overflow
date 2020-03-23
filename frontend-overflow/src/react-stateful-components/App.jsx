@@ -13,11 +13,9 @@ class App extends React.Component {
     }
 
     populateState = () => {
-        this.getSubmissions()
     }
 
     getSubmissions = () => {
-        selectors.requestSubmissions(this)
     }
 
     setZoom = (ratio) => {
