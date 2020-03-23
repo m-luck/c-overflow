@@ -10,8 +10,8 @@ export const colors = {
     softWhite: '#F6F6F6',
 }
 
-export const API_SUBMISSION_URL = "https://overflowstorage-0ba2.restdb.io/rest/submissions"
-export const API_SUBMISSION_BACKUP_URL = "https://overflowstorage-0ba2.restdb.io/rest/submissionBackups"
+export const API_SUBMISSION_URL = "https://overflowstorage-0ba2.restdb.io/rest/submissions/"
+export const API_SUBMISSION_BACKUP_URL = "https://overflowstorage-0ba2.restdb.io/rest/submissionBackups/"
 
 // Redux Form Keys
 export const SLIDERS_FORM_KEY = 'SLIDERS_FORM'
