@@ -47,7 +47,7 @@ const parseIP = (res, changeForm) => {
 }
 
 const selectors = {
-    requestSubmissions,
+    // requestSubmissions,
     convertTupleToMarkObject,
     getReduxFormFieldName,
     setIP,
