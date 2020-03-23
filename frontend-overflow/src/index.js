@@ -8,7 +8,10 @@ import { Provider } from 'react-redux'
 import appReducer from './redux/reducers.js'
 import { createStore } from 'redux'
 
-export let store = createStore(appReducer)
+export let store = createStore(
+    appReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
     <Provider store={store}>

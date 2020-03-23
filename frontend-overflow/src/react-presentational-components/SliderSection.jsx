@@ -9,6 +9,8 @@ import {
 const SliderSection = props => {
 
     const {
+        className,
+        input, // If passed in from Redux Form Field
         marks = [],
         max = DEFAULT_MAX,
         min = DEFAULT_MIN,
@@ -16,9 +18,11 @@ const SliderSection = props => {
     } = props
 
     return (
-        <div>
+        <div className={className}>
             <h3>{sectionTitle}</h3>
             <StyledSimpleSlider
+                value={input.value}
+                onChange={(event, value) => input.onChange(value)}
                 max={max}
                 marks={marks}
                 min={min}

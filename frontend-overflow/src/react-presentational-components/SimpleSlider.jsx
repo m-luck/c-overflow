@@ -1,6 +1,4 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import {
     DEFAULT_MAX,
@@ -10,23 +8,25 @@ import {
 
 const SimpleSlider = props => {
     const {
+        className,
         marks = [],
         max = DEFAULT_MAX,
         min = DEFAULT_MIN,
+        onChange,
+        value,
     } = props
 
     const valuetext = value => `${value}`
 
     return (
-        <Slider
-            aria-labelledby="discrete-slider"
-            defaultValue={max/2}
-            getAriaValueText={valuetext}
+        <Slider className={className}
             marks={marks}
             max={max}
             min={min}
             step={1}
-            valueLabelDisplay="auto"
+            onChange={onChange}
+            value={value}
+            // valueLabelDisplay="auto"
         />
     )
 }

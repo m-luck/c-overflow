@@ -5,13 +5,15 @@ class SubmissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Submission
         fields = (
+            'belief',
             'breathing',
             'comment',
-            'cough',
+            'coughing',
             'created_at',
             'email',
             'fatigue',
             'fever',
+            'headache',
             'id',
             'ip_address',
             'nose',

@@ -26,9 +26,31 @@ const convertTupleToMarkObject = (tuple) => {
     )
 }
 
+const getReduxFormFieldName = (config) => (config.item || config.slug).toLowerCase()
+
+const setIP = (changeForm) => {
+    axios.get('https://www.cloudflare.com/cdn-cgi/trace')
+    .then(res => parseIP(res, changeForm))
+}
+
+// Callback for getIP
+const parseIP = (res, changeForm) => {
+    const lines = res.data.split("\n")
+    lines.forEach(line =>
+        {
+            if (line.startsWith("ip")) {
+                const ip = line.split("=")[1]
+                changeForm("ip_address", ip)
+            }
+        }
+    )
+}
+
 const selectors = {
     requestSubmissions,
-    convertTupleToMarkObject
+    convertTupleToMarkObject,
+    getReduxFormFieldName,
+    setIP,
 }
 
 export default selectors
