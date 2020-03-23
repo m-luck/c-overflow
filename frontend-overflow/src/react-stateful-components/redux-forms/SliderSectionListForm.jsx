@@ -61,7 +61,7 @@ const UnconnectedSliderSectionList = props => {
                 />
                 <StyledButton onClick={() =>
                     {
-                        handleSubmit
+                        handleSubmit()
                         props.change('email', 'Submitted!')
                         props.change('comment', 'I hear you. Thank you for helping paint a better picture.')
                     }

@@ -4,18 +4,18 @@ import {
     API_SUBMISSION_URL
 } from '../constants.js'
 
-const requestSubmissions = (component) => {
-    axios.get(API_SUBMISSION_URL)
-    .then(res => {
-            component.setState(
-                { submissions: res.data },
-                () => { // Callback once response is resolved
-                    // Empty for now.
-                }
-            )
-        }
-    )
-}
+// const requestSubmissions = (component) => {
+//     axios.get(API_SUBMISSION_URL)
+//     .then(res => {
+//             component.setState(
+//                 { submissions: res.data },
+//                 () => { // Callback once response is resolved
+//                     // Empty for now.
+//                 }
+//             )
+//         }
+//     )
+// }
 
 const convertTupleToMarkObject = (tuple) => {
     return (
@@ -47,7 +47,7 @@ const parseIP = (res, changeForm) => {
 }
 
 const selectors = {
-    requestSubmissions,
+    // requestSubmissions,
     convertTupleToMarkObject,
     getReduxFormFieldName,
     setIP,

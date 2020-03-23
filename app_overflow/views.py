@@ -10,5 +10,5 @@ class SubmissionListCreate(generics.ListCreateAPIView):
     serializer_class = SubmissionSerializer
 
 class SubmissionBackupListCreate(generics.ListCreateAPIView):
-    queryset = Submission.objects.all()
-    serializer_class = SubmissionSerializer
+    queryset = SubmissionBackup.objects.all()
+    serializer_class = SubmissionBackupSerializer
