@@ -17,7 +17,7 @@ class App extends React.Component {
     }
 
     getSubmissions = () => {
-        // selectors.requestSubmissions(this)
+        selectors.requestSubmissions(this)
     }
 
     setZoom = (ratio) => {
