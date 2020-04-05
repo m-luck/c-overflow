@@ -27,7 +27,7 @@ class App extends React.Component {
     render() {
         return (
                 <div className={this.props.className}>
-                    <NightModeButton>Toggle Headache Mode 🌙</NightModeButton>
+                    {/* <NightModeButton>Toggle Headache Mode 🌙</NightModeButton> */}
                     <StyledSliderSectionListForm/>
                 </div>
         )
