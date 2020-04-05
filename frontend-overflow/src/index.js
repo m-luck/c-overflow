@@ -12,7 +12,7 @@ export let store = createStore(
     appReducer,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
-
+//edit
 ReactDOM.render(
     <Provider store={store}>
         <StyledApp />
