@@ -9,6 +9,15 @@ export const colors = {
     nightBlue: '#336667',
     softWhite: '#F6F6F6',
 }
+export const darkColors = {
+    orange: '#ee6565',
+    blue: '#5476fe',
+    pink: '#ee6565',
+    green: '#ee6565',
+    nightOrange: '#ffcb99',
+    nightBlue: '#222',
+    softWhite: '#333',
+}
 
 export const API_SUBMISSION_URL = "https://overflowstorage-0ba2.restdb.io/rest/submissions"
 export const API_SUBMISSION_BACKUP_URL = "http://overflowstorage-0ba2.restdb.io/rest/submissionBackups"

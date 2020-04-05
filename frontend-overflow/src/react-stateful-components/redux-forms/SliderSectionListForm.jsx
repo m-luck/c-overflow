@@ -11,7 +11,6 @@ import {
     SLIDERS_FORM_KEY,
     sliderSectionListFormInitialValues,
 } from '../../constants.js'
-import NightModeButton from "../NightModeButton.jsx"
 import selectors from '../../selectors/selectors.js'
 import { connect } from 'react-redux'
 import { onSubmitSliderSectionListForm } from '../../redux/action-creators.js'
@@ -28,7 +27,6 @@ const UnconnectedSliderSectionList = props => {
         <div className={className}>
             <h2>This is How I Am Feeling...</h2>
             <div>
-                <NightModeButton/>
                 {
                     sliderConfigs.map(config => {
                         const uniqueID = selectors.getReduxFormFieldName(config)
@@ -79,4 +77,4 @@ const SliderSectionListForm = reduxForm({
     initialValues: sliderSectionListFormInitialValues(),
   })(UnconnectedSliderSectionList)
 
-export default connect(null)(SliderSectionListForm)
+export default connect((state) => ({ colors: state.nightMode.colors }))(SliderSectionListForm)

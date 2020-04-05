@@ -4,6 +4,8 @@ import {
     StyledSliderSectionListForm
 } from './styled-stateful-components.jsx'
 import selectors from '../selectors/selectors.js'
+import NightModeButton from "../react-stateful-components/NightModeButton.jsx"
+import { toggleNightMode } from '../redux/action-creators.js'
 import { colors, sliderSectionListFormInitialValues } from '../constants.js'
 
 class App extends React.Component {
@@ -25,6 +27,7 @@ class App extends React.Component {
     render() {
         return (
                 <div className={this.props.className}>
+                    <NightModeButton>Toggle Headache Mode 🌙</NightModeButton>
                     <StyledSliderSectionListForm/>
                 </div>
         )

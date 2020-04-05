@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import SliderSectionListForm from './redux-forms/SliderSectionListForm.jsx'
-import { colors } from '../constants.js'
+import { colors as dayColors, darkColors } from '../constants.js'
 
+let colors = darkColors
 export const StyledSliderSectionListForm = styled(SliderSectionListForm)`
     h2 { color: ${colors.green} }
     padding: 7vh;

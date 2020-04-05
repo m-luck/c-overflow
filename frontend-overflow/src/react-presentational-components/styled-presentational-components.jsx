@@ -6,9 +6,11 @@ import FormTextArea from './FormTextArea.jsx'
 import SimpleSlider from './SimpleSlider.jsx'
 import SliderSection from './SliderSection.jsx'
 
-import { colors } from '../constants.js'
+import { colors as dayColors, darkColors } from '../constants.js'
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+
+let colors = darkColors
 
 const sliderColors = createMuiTheme({
     overrides:{
