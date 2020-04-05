@@ -6,8 +6,8 @@ import {
     POST_SUBMISSION,
 } from './action-types'
 
-export const disableNightMode = { type: DISABLE_NIGHT_MODE }
-export const enableNightMode = { type: ENABLE_NIGHT_MODE }
-export const toggleNightMode = { type: TOGGLE_NIGHT_MODE }
+export const disableNightModeAction = { type: DISABLE_NIGHT_MODE }
+export const enableNightModeAction = { type: ENABLE_NIGHT_MODE }
+export const toggleNightModeAction = { type: TOGGLE_NIGHT_MODE }
 
-export const postSubmission = { type: POST_SUBMISSION }
+export const postSubmissionAction = { type: POST_SUBMISSION }

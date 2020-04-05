@@ -1,10 +1,10 @@
 // Action creators dispatch actions (`dispatch()` being a Redux function). Action creators are also tasked to handle any side effects of the action (besides the state).
 import axios from 'axios'
 import {
-    disableNightMode,
-    enableNightMode,
-    toggleNightMode,
-    postSubmission,
+    disableNightModeAction,
+    enableNightModeAction,
+    toggleNightModeAction,
+    postSubmissionAction,
 } from './actions.js'
 import {
     API_SUBMISSION_URL,
@@ -47,5 +47,15 @@ export const onSubmitSliderSectionListForm = (values, dispatch, props) => {
     //     null
     // )
 
-    dispatch(postSubmission)
+    dispatch(postSubmissionAction)
+}
+
+export const setNightMode = (state) => {
+    state
+    ? dispatch(enableNightModeAction)
+    : dispatch(disableNightModeAction)
+}
+
+export const toggleNightMode = () => {
+    dispatch(toggleNightModeAction)
 }
